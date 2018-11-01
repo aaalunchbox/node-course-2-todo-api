@@ -29,6 +29,11 @@ app.get('/todos', (req, res) => {
     });
 });
 
+// GET /todos/id
+app.get('/todos/:id', (req, res) => {
+    res.send(req.params);
+});
+
 app.listen(3000, () => {
     console.log('Starated on port 3000');
 });
